@@ -3,8 +3,13 @@ class Programa {
   static void Main() {
 
     CuentaBancaria MiCuenta = new CuentaBancaria();
-
+    
+    MiCuenta.Deposito(1000);
     Console.WriteLine(MiCuenta.ObtenerSaldo());
+    MiCuenta.Retiro(300);
+    Console.WriteLine(MiCuenta.ObtenerSaldo());
+    
+    
     
   }
 }
