@@ -4,13 +4,14 @@ class Programa {
 
     CuentaBancaria MiCuenta = new CuentaBancaria();
     CuentaBancaria MiCuenta2 = new CuentaBancaria();
-    
+    MiCuenta.nombre = "Juan";
     MiCuenta.Deposito(1000);
     Console.WriteLine(MiCuenta.ObtenerSaldo());
     MiCuenta.Retiro(300);
+    Console.WriteLine(MiCuenta.nombre);
     Console.WriteLine(MiCuenta.ObtenerSaldo());
     
-    Micuenta2.Deposito(1234);
+    MiCuenta2.Deposito(1234);
     Console.WriteLine(MiCuenta2.ObtenerSaldo());
     
     
@@ -20,7 +21,7 @@ class Programa {
 class CuentaBancaria
 {
   private decimal saldo;
-  private string nombre;
+  public string nombre;
   public void Retiro(decimal cantidad){
     saldo-=cantidad;
   }
