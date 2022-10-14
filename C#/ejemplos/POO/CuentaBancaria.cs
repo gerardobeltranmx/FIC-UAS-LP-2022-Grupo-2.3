@@ -5,6 +5,7 @@ class Programa {
     CuentaBancaria MiCuenta = new CuentaBancaria();
     CuentaBancaria MiCuenta2 = new CuentaBancaria();
     MiCuenta.nombre = "Juan";
+    MiCuenta.saldo = 800000;
     MiCuenta.Deposito(1000);
     Console.WriteLine(MiCuenta.ObtenerSaldo());
     MiCuenta.Retiro(300);
