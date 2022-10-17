@@ -5,7 +5,7 @@ class Programa {
     CuentaBancaria MiCuenta = new CuentaBancaria();
     CuentaBancaria MiCuenta2 = new CuentaBancaria();
     MiCuenta.EstableceNombre("Juan");
-    MiCuenta.Deposito(1000);
+    MiCuenta.Deposito(-1000);
     Console.WriteLine(MiCuenta.ObtenerSaldo());
     MiCuenta.Retiro(1300);
     Console.WriteLine(MiCuenta.ObtenerNombre());
@@ -32,7 +32,7 @@ class CuentaBancaria
     if (saldo > 0 )
       saldo+=cantidad;
     else 
-      Console.WriteLine("Error: cantidad debe ser superior a 0 (cero); ")
+      Console.WriteLine("Error: cantidad debe ser superior a 0 (cero); ");
   }
   public decimal ObtenerSaldo( ){
     return saldo;
