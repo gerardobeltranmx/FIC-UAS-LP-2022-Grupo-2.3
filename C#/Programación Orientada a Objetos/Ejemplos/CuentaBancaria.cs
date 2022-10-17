@@ -4,12 +4,11 @@ class Programa {
 
     CuentaBancaria MiCuenta = new CuentaBancaria();
     CuentaBancaria MiCuenta2 = new CuentaBancaria();
-    MiCuenta.nombre = "Juan";
-    MiCuenta.saldo = 800000;
+    MiCuenta.EstableceNombre("Juan");
     MiCuenta.Deposito(1000);
     Console.WriteLine(MiCuenta.ObtenerSaldo());
-    MiCuenta.Retiro(300);
-    Console.WriteLine(MiCuenta.nombre);
+    MiCuenta.Retiro(1300);
+    Console.WriteLine(MiCuenta.ObtenerNombre());
     Console.WriteLine(MiCuenta.ObtenerSaldo());
     
     MiCuenta2.Deposito(1234);
@@ -22,14 +21,26 @@ class Programa {
 class CuentaBancaria
 {
   private decimal saldo;
-  public string nombre;
+  private string nombre;
   public void Retiro(decimal cantidad){
-    saldo-=cantidad;
+    if (saldo >= cantidad)  
+      saldo-=cantidad;
+    else
+      Console.WriteLine("Saldo insuficiente: {0:C}", saldo);
   }
   public void Deposito(decimal cantidad){
-    saldo+=cantidad;
+    if (saldo > 0 )
+      saldo+=cantidad;
+    else 
+      Console.WriteLine("Error: cantidad debe ser superior a 0 (cero); ")
   }
   public decimal ObtenerSaldo( ){
     return saldo;
+  }
+  public void EstableceNombre(string nombre){
+    this.nombre = nombre;
+  }
+  public string ObtenerNombre(){
+    return this.nombre;
   }
 }
