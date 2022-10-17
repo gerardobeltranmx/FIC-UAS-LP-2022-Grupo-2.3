@@ -2,9 +2,13 @@ using System;
 class Programa {
   static void Main() {
 
+    Circulo Obj;
+    Obj = new Circulo();
+    double radio;
+    radio = double.Parse(Console.ReadLine());
+    Obj.CambiarRadio(radio);
+    Console.WriteLine("{0:F2}",Obj.Area());
     
-
-  
   }
 
   
