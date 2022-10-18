@@ -1,10 +1,10 @@
 using System;
 class Programa {
   static void Main() {
-    Temperaturas Clima = new Temperaturas();
     int Temp = int.Parse(Console.ReadLine());
-    Clima.CambiarTemp (Temp);
-    Console.WriteLine ( "{0} {1} {2}",
+
+    Temperaturas Clima = new Temperaturas(Temp);
+      Console.WriteLine ( "{0} {1} {2}",
       Clima.GradosKelvin(),
       Clima.GradosFahrenheit(),
       Clima.GradosRéaumur()
