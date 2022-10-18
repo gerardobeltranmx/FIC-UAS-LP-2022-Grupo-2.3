@@ -2,7 +2,7 @@ using System;
 class Programa {
   static void Main() {
 
-    CuentaBancaria MiCuenta = new CuentaBancaria();
+    CuentaBancaria MiCuenta = new CuentaBancaria("Luis Perez", 50);
     
     Console.WriteLine(MiCuenta.ObtenerNombre());
     Console.WriteLine(MiCuenta.ObtenerSaldo());
@@ -33,9 +33,18 @@ class CuentaBancaria
   private string nombre;
   
   public CuentaBancaria(){
-      saldo = 3000;
+      saldo = 0;
       nombre = "Desconocido";
   }
+  
+  public CuentaBancaria(string nombre, decimal saldo){
+      this.nombre = nombre;
+      this.saldo = saldo;
+
+  }
+  
+  
+  
   public void Retiro(decimal cantidad){
     if (saldo >= cantidad)  
       saldo-=cantidad;
@@ -50,15 +59,6 @@ class CuentaBancaria
   }
   public decimal ObtenerSaldo( ){
     return saldo;
-  }
-  public void EstableceNombre(string nombre){
-    this.nombre = nombre;
-  }
-  public string ObtenerNombre(){
-    return this.nombre;
-  }
-}
-
   }
   public void EstableceNombre(string nombre){
     this.nombre = nombre;
