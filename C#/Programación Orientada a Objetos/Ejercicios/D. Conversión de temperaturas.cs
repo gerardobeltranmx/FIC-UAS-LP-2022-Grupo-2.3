@@ -2,7 +2,12 @@ using System;
 class Programa {
   static void Main() {
     Temperaturas Clima = new Temperaturas();
-
+    Clima.CambiarTemp (100);
+    Console.WriteLine ( "{0} {1} {2}"
+      Clima.GradosFahrenheit(),
+      Clima.GradosKelvin(),
+      Clima.GradosRéaumur()
+    );
     
   }
 }
