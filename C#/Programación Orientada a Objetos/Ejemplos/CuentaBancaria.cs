@@ -3,7 +3,16 @@ class Programa {
   static void Main() {
 
     CuentaBancaria MiCuenta = new CuentaBancaria();
-    CuentaBancaria MiCuenta2 = new CuentaBancaria();
+    
+    Console.WriteLine(MiCuenta.ObtenerNombre());
+    Console.WriteLine(MiCuenta.ObtenerSaldo());
+    MiCuenta.Deposito(1000);
+    Console.WriteLine(MiCuenta.ObtenerSaldo());
+    
+    
+    
+    
+   /* CuentaBancaria MiCuenta2 = new CuentaBancaria();
     MiCuenta.EstableceNombre("Juan");
     MiCuenta.Deposito(-1000);
     Console.WriteLine(MiCuenta.ObtenerSaldo());
@@ -14,7 +23,7 @@ class Programa {
     MiCuenta2.Deposito(1234);
     Console.WriteLine(MiCuenta2.ObtenerSaldo());
     
-    
+    */
   }
 }
 
@@ -22,6 +31,11 @@ class CuentaBancaria
 {
   private decimal saldo;
   private string nombre;
+  
+  public CuentaBancaria(){
+      saldo = 3000;
+      nombre = "Desconocido";
+  }
   public void Retiro(decimal cantidad){
     if (saldo >= cantidad)  
       saldo-=cantidad;
@@ -36,6 +50,15 @@ class CuentaBancaria
   }
   public decimal ObtenerSaldo( ){
     return saldo;
+  }
+  public void EstableceNombre(string nombre){
+    this.nombre = nombre;
+  }
+  public string ObtenerNombre(){
+    return this.nombre;
+  }
+}
+
   }
   public void EstableceNombre(string nombre){
     this.nombre = nombre;
