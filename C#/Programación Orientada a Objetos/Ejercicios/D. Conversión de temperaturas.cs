@@ -3,7 +3,7 @@ class Programa {
   static void Main() {
     Temperaturas Clima = new Temperaturas();
     Clima.CambiarTemp (100);
-    Console.WriteLine ( "{0} {1} {2}"
+    Console.WriteLine ( "{0} {1} {2}",
       Clima.GradosFahrenheit(),
       Clima.GradosKelvin(),
       Clima.GradosRéaumur()
@@ -15,28 +15,32 @@ class Programa {
 class  Temperaturas {
   private int GradosCelcius;
 
+  public Temperaturas(){
+    
+  }
   public Temperaturas(int Temp){
     GradosCelcius = Temp;
   }
   
-  public CambiarTemp(int Temp){
+  
+  public void CambiarTemp(int Temp){
     GradosCelcius = Temp;
   }
 
   public int ObtenerTemp(){
-    return 1.8 * GradosCelcius + 32
+    return 9 / 5 * GradosCelcius + 32;
   }
 
   public int GradosFahrenheit(){
-    return 1.8 * GradosCelcius + 32
+    return 9 / 5 * GradosCelcius + 32;
   }
 
   public int GradosKelvin(){
-    return GradosCelcius + 273
+    return GradosCelcius + 273;
   }
 
   public int GradosRéaumur(){
-    return (4/5) * GradosCelcius
+    return (4/5) * GradosCelcius;
   }
 
   
