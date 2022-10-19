@@ -1,7 +1,7 @@
 using System;
 class Programa {
   static void Main() {
-    Esfera Figura = new Figura();
+    Esfera Figura = new Esfera();
     double Radio;
     Radio = double.Parse(Console.ReadLine());
     Figura.CambiarRadio(Radio);
