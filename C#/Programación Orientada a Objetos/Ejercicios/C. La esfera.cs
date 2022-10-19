@@ -13,6 +13,7 @@ class Programa {
 }
 class Esfera{
   private double Radio;
+  private const double PI=3.1416;
   public Esfera (){
     Radio = 0; 
   }
@@ -26,9 +27,9 @@ class Esfera{
     this.Radio = Radio;
   }
   public double Superficie(){
-     return 4 * Math.PI * Math.Pow(Radio,2);   
+     return 4 * PI * Math.Pow(Radio,2);   
   }
   public double Volumen(){
-     return 4.0/3.0 * Math.PI * Math.Pow(Radio,3);   
+     return 4.0/3.0 * PI * Math.Pow(Radio,3);   
   }
 }  
