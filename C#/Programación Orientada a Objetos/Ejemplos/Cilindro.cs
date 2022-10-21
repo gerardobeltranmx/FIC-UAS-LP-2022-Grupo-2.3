@@ -55,4 +55,7 @@ class Cilindro:Circulo{
   public double ObtenerVolumen(){
     return ObtenerArea()*ObtenerAltura();
   }
+  public double ObtenerSuperfice(){
+      return 2 * ObtenerArea() + ObtenerPerimetro() * ObtenerAltura(); 
+  }
 }
