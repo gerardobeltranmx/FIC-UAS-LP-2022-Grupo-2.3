@@ -2,10 +2,10 @@ using System;
 class Programa {
   static void Main() {
 
-    Cilindro Tanque = new  Cilindro();
+    Cilindro Tanque = new  Cilindro(10,100);
 
-    Tanque.CambiarRadio(10);
-    Tanque.CambiarAltura(100);
+    //Tanque.CambiarRadio(10);
+    //Tanque.CambiarAltura(100);
     Console.WriteLine("Radio: {0} Altura: {1} Volumen: {2} Area de la base: {3} Perimetro: {4}",
                         Tanque.ObtenerRadio(),
                         Tanque.ObtenerAltura(),
