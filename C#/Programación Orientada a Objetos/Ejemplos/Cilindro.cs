@@ -18,7 +18,10 @@ class Programa {
 }
 class Circulo{
   private double radio;
-  public Circulo(int r){
+  public Circulo(){
+    
+  }
+  public Circulo(double r){
     radio=r;
   }
   public void CambiarRadio(double r){
